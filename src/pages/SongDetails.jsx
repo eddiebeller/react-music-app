@@ -5,7 +5,7 @@ import { DetailsHeader, Error, Loader, RelatedSongs } from '../components';
 import {
   useGetSongDetailsQuery,
   useGetSongRelatedQuery,
-} from '../redux/services/shazamCore.js';
+} from '../redux/services/shazamCoreApi';
 
 import { setActiveSong, playPause } from '../redux/features/playerSlice.js';
 

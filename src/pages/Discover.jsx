@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { genres } from '../assets/constants';
 
 import { Error, Loader, SongCard } from '../components';
-import { useGetGenreChartsQuery } from '../redux/services/shazamCore';
+import { useGetGenreChartsQuery } from '../redux/services/shazamCoreApi';
 import { selectGenreListId } from '../redux/features/playerSlice';
 
 const Discover = () => {

@@ -1,5 +1,6 @@
 import { Error, Loader, ArtistCard } from '../components';
-import { useGetTopChartsQuery } from '../redux/services/shazamCore';
+import { useGetTopChartsQuery } from '../redux/services/shazamCoreApi';
+import Heading from './Heading';
 
 const TopArtists = () => {
   const { data, isFetching, error } = useGetTopChartsQuery();
@@ -14,9 +15,7 @@ const TopArtists = () => {
 
   return (
     <section className="flex flex-col">
-      <h2 className="font-bold text-3xl text-white text-left mb-10 mt-4">
-        Top Artists
-      </h2>
+      <Heading title="Top Artists" />
       <div className="flex flex-wrap sm:justify-start justify-center gap-8">
         {data?.map((track) => (
           <ArtistCard data={data} key={track.key} track={track} />

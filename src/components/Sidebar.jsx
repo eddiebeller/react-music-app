@@ -1,35 +1,14 @@
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+
 import { HiOutlineMenu } from 'react-icons/hi';
 import { RiCloseLine } from 'react-icons/ri';
+import NavLinks from './NavLinks';
 
 import { logo } from '../assets';
-import { links } from '../assets/constants';
-
-// TODO: Refactor NavLinks component and move it from Sidebar component.
-// Move Navigation/Mobile navigation to two separated componets from Sidebar component.
-// Move burger component from Sidebar component
-// Create a handleClick function
-
-const NavLinks = ({ handleClick }) => (
-  <ul className="mt-10">
-    {links.map((item) => (
-      <li className="mt-8" key={item.name}>
-        <NavLink
-          to={item.to}
-          className="flex flex-row justify-start items-center text-sm font-medium text-gray-400 hover:text-cyan-400"
-          onClick={() => handleClick && handleClick()}
-        >
-          <item.icon className="w-6 h-6 mr-2" />
-          {item.name}
-        </NavLink>
-      </li>
-    ))}
-  </ul>
-);
 
 const Sidebar = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
+
   return (
     <>
       <aside className="md:flex hidden flex-col w-[240px] py-10 px-4 bg-[#191624]">

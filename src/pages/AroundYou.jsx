@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { useState, useEffect } from 'react';
 
 import { Error, Loader, SongCard } from '../components';
-import { useGetSongsByCountryQuery } from '../redux/services/shazamCore';
+import { useGetSongsByCountryQuery } from '../redux/services/shazamCoreApi';
 
 const AroundYou = () => {
   const [country, setCountry] = useState('');

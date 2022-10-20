@@ -1,7 +1,8 @@
 import { useSelector } from 'react-redux';
+import Heading from './Heading';
 
 import { Error, Loader, SongCard } from '../components';
-import { useGetTopChartsQuery } from '../redux/services/shazamCore';
+import { useGetTopChartsQuery } from '../redux/services/shazamCoreApi';
 
 const TopCharts = () => {
   const { activeSong, isPlaying } = useSelector((state) => state.player);
@@ -15,9 +16,7 @@ const TopCharts = () => {
 
   return (
     <section className="flex flex-col">
-      <h2 className="font-bold text-3xl text-white text-left mb-10 mt-4">
-        Top Charts
-      </h2>
+      <Heading title="Top Charts" />
       <div className="flex flex-wrap sm:justify-start justify-center gap-8">
         {data?.map((song, index) => (
           <SongCard
